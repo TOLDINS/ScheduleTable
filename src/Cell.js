@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
 import Couples from './Couples';
-import {getAllRooms} from '../src/API/fetchRequest';
+import {getAllRooms,getAnyCouples} from '../src/API/fetchRequest';
 import styled from "styled-components";
 import Card_lesson_on_other from './Card_lesson_on_other';
 
 class Cell extends Component{
  state={
      classrooms:[],
+     any_couples:[],
      couples:[],
      kaf:this.props.match.params.kaf,
      day:this.props.match.params.day
  }
  componentDidMount(){
         getAllRooms(this.state.kaf).then(res=>this.setState({classrooms:res}));
+        getAnyCouples(this.state.kaf,this.state.day).then(res=>this.setState({any_couples:res}))
+
+
 }    
 
 
@@ -34,6 +38,21 @@ class Cell extends Component{
                 )
 
         })
+        let any_result=[];
+        if( this.state.any_couples.length!==0){
+            console.log(this.state.any_couples);
+            any_result=this.state.any_couples.map(item=>{
+                return (
+                <Card_lesson_on_other parameter={item} classrooms={this.state.classrooms}/>
+                )
+              
+            })
+
+        }
+        else{
+            any_result=[];
+        }
+       
       
 
         return(
@@ -73,11 +92,8 @@ class Cell extends Component{
             </Rows>
            
            <Lesson_on_other>
-               <Card_lesson_on_other></Card_lesson_on_other>
-               <Card_lesson_on_other></Card_lesson_on_other>
-               <Card_lesson_on_other></Card_lesson_on_other>
-               <Card_lesson_on_other></Card_lesson_on_other>
-
+               
+               {any_result}
 
            </Lesson_on_other>
             </div>
@@ -91,7 +107,7 @@ export default Cell
 const Lesson_on_other=styled.div`
 width:100%;
 display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(5,1fr);
 `;
 
 const AUD = styled.p`

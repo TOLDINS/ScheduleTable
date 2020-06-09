@@ -32,7 +32,6 @@ async function getLessons(kaf,day){
 async function getAllRooms(kaf){
  
    return await fetch(`/admin/schedule/${kaf}`).then(checkFetchResponse).then((data)=>{
-       console.log(data)
        return data;
      })
     
@@ -40,6 +39,15 @@ async function getAllRooms(kaf){
    // return ['219','219а','221','223','224','226','230']
 
   
+}
+async function getAnyCouples(kaf,day){
+  let result= await fetch(`/admin/schedule/${kaf}/${day}/any`).then(checkFetchResponse).then((data)=>{
+    
+   return data;
+  });
+  console.log('Result:',result)
+  return result;
+
 }
 function byField(field) {
   return (a, b) => a[field] > b[field] ? 1 : -1;
@@ -80,5 +88,6 @@ async function Fetch(url,body){
 }
 export {
    getLessons,
-   getAllRooms
+   getAllRooms,
+   getAnyCouples
 }
