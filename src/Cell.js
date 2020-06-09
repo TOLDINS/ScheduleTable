@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Couples from './Couples';
 import {getAllRooms} from '../src/API/fetchRequest';
 import styled from "styled-components";
-import Card_lesson from './Card_lesson';
+import Card_lesson_on_other from './Card_lesson_on_other';
 
 class Cell extends Component{
  state={
@@ -27,7 +27,7 @@ class Cell extends Component{
 
                 return (
                 <div>
-                     <AUD>{classroom.split('*')[0]}</AUD>   
+                    
                          <Couples kaf={this.state.kaf}  room={classroom}  day={this.state.day}/>
                 </div>
                 
@@ -37,40 +37,50 @@ class Cell extends Component{
       
 
         return(
-        
+        <div>
             <Rows num={cell_result.length+1}>
                 <div>
-                     <AUD>Пара</AUD>    
+                     
                      <Cells>
-                     <div style={{height:"150px", textAlign:"center" ,marginBottom: "10px",padding: "10px"}}>
-                         <p style={{margin:"48%",fontSize:"20px", fontWeight:"bold"}}>
+                     <AUD>Пара</AUD>    
+                     <Div style={{height:"150px", textAlign:"center" ,marginBottom: "10px",padding: "10px"}}>
+                         <p style={{margin:"70px",fontSize:"20px", fontWeight:"bold",color:"#ffffff"}}>
                          I
                          </p>
-                         </div>
-                     <div style={{height:"150px", textAlign:"center",marginBottom: "10px",padding: "10px"}}>
-                     <p style={{margin:"48%",fontSize:"20px", fontWeight:"bold"}}>
+                         </Div>
+                     <Div style={{height:"150px", textAlign:"center",marginBottom: "10px",padding: "10px"}}>
+                     <p style={{margin:"70px",fontSize:"20px", fontWeight:"bold",color:"#ffffff"}}>
                         II
                         </p>
-                         </div>
-                     <div style={{height:"150px", textAlign:"center",marginBottom: "10px",padding: "10px"}}>
+                         </Div>
+                     <Div style={{height:"150px", textAlign:"center",marginBottom: "10px",padding: "10px"}}>
                         
-                     <p style={{margin:"48%",fontSize:"20px", fontWeight:"bold"}}> 
+                     <p style={{margin:"70px",fontSize:"20px", fontWeight:"bold",color:"#ffffff"}}> 
                      III
                          </p>
-                         </div>
-                     <div style={{height:"150px", textAlign:"center",marginBottom: "10px",padding: "10px"}}>
+                         </Div>
+                     <Div style={{height:"150px", textAlign:"center",marginBottom: "10px",padding: "10px"}}>
                         
-                     <p style={{margin:"48%",fontSize:"20px", fontWeight:"bold"}}> 
+                     <p style={{margin:"70px",fontSize:"20px", fontWeight:"bold",color:"#ffffff"}}> 
                       IV
                          </p>
-                         </div>
+                         </Div>
 
                      </Cells>
                     </div>
                 {cell_result}
 
             </Rows>
+           
+           <Lesson_on_other>
+               <Card_lesson_on_other></Card_lesson_on_other>
+               <Card_lesson_on_other></Card_lesson_on_other>
+               <Card_lesson_on_other></Card_lesson_on_other>
+               <Card_lesson_on_other></Card_lesson_on_other>
 
+
+           </Lesson_on_other>
+            </div>
         )
     }
 
@@ -78,19 +88,36 @@ class Cell extends Component{
 }
 export default Cell
 
+const Lesson_on_other=styled.div`
+width:100%;
+display: grid;
+  grid-template-columns: repeat(6,1fr);
+`;
+
 const AUD = styled.p`
 text-align:center;
-
+color:#ffffff;
+font-size: 20px;
 `;
 const Rows=styled.div`
 display: grid;
   grid-template-columns: repeat(${props => props.num},1fr);
-  grid-auto-rows: 1fr;
 
 `;
 
 const Cells=styled.div`
 display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
 
 `;
+const Div=styled.div`
+float: left;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 80%;
+    height: 150px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.4s;`;

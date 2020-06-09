@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import Card_lesson from './Card_lesson';
+import Card_free_aud from './Card_free_aud';
+
 import {getLessons} from '../src/API/fetchRequest';
 import styled from "styled-components";
 class Couples extends Component {
@@ -98,7 +100,7 @@ state={
 
           }
           else{
-            return <Card_lesson parameter={free}/>
+            return <Card_free_aud/>
 
           }
         })
@@ -106,6 +108,7 @@ state={
         
         return (
                   <Cells>
+                  <AUD>{this.props.room.split('*')[0]}</AUD>   
                   {result}
                   </Cells>
 
@@ -115,9 +118,13 @@ state={
 }
 
 export default Couples;
+const AUD = styled.p`
+text-align:center;
+color:#ffffff;
+font-size:20px;
 
+`;
 const Cells=styled.div`
 display: grid;
-  grid-template-rows: repeat(4, 1fr);
-
+  grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
 `;
