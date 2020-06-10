@@ -1,8 +1,11 @@
-import React from 'react';
 import Shedule from './Cell';
+import React, {Component, Fragment} from 'react';
+
 import './../index.css'
 import Cell from './Cell'
 import Change_kafedra_day from './Change_kafedra_day'
+import ReactDOM from 'react-dom';
+
 import {
   BrowserRouter,
   Switch,
@@ -11,7 +14,8 @@ import {
 } from "react-router-dom";
 
 
-function App() {
+class App extends Component {
+  render(){
   return (
      <BrowserRouter>
     <Switch>
@@ -25,6 +29,7 @@ function App() {
   
 
   );
+  }
 }
 
 export default App;
