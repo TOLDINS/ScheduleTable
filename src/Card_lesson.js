@@ -17,29 +17,119 @@ class Card_lesson extends Component {
             group2,
             group3,
             group4,
-
-
-        }=this.props.parameter
-    
+            couple
+                }=this.props.parameter
         return(
-            <div className="card 2">
+            <Card className="card 2" count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>
             <div className="card_image">          
             <Text>{(lesson_type!==undefined)?lesson_type:null}</Text>
             <Text>{(teacher1!==undefined)?teacher1:null}{(teacher1_1!==undefined)?teacher1_1:null}{(teacher2!==undefined)?teacher2:null}{(teacher2_1!==undefined)?teacher2_1:null}</Text>
             <Text>{(group1!==undefined)?group1:null}    {(group2!==undefined)?group2:null}    {(group3!==undefined)?group3:null}   {(group4!==undefined)?group4:null}  </Text>
             </div>
-            <div className="card_title title-white">
+            <Title count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>
                 <p>{subject}</p>
-            </div>
-            </div>
+            </Title>
+            </Card>
         )
     }
 }
 
 export default Card_lesson
 const Text =styled.p`
-color:#31372a;
 font-size:16px;
 font-weight:bold;
+color: ${
+    props=>props.count==1?(
+        props.first?"#fff":
+        
+        "#000000"
+        )
+    :(props.count==2)?(
+        props.second?"#fff":
+        
+        "#000000"
+        )
+    :(props.count==3)?(
+      
+        props.third?"#fff":
+        "#000000"
+        )
+    :(props.count==4)?(
+        
+        props.fourth?"#fff":
+        "#000000"
+        ):"#000000"
 
+};
+`;
+const Title=styled.p`
+text-align: center;
+border-radius: 0px 0px 40px 40px;
+font-family: sans-serif;
+font-weight: bold;
+font-size: 20px;
+margin-top: -80px;
+height: 40px;
+font-size:20px;
+color: ${
+    props=>props.count==1?(
+        props.first?"#fff":
+        
+        "#000000"
+        )
+    :(props.count==2)?(
+        props.second?"#fff":
+        
+        "#000000"
+        )
+    :(props.count==3)?(
+      
+        props.third?"#fff":
+        "#000000"
+        )
+    :(props.count==4)?(
+        
+        props.fourth?"#fff":
+        "#000000"
+        ):"#000000"
+
+};
+font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+`;
+const Card =styled.div`
+float: left;
+margin: auto;
+margin-bottom: 10px;
+padding: 10px;
+margin-top: 20px;
+background: ${
+    props=>props.count==1?(
+        props.first?"#205D6D":
+        
+        "#896C9A"
+        )
+    :(props.count==2)?(
+        props.second?"#205D6D":
+        
+        "#896C9A"
+        )
+    :(props.count==3)?(
+      
+        props.third?"#205D6D":
+        "#896C9A"
+        )
+    :(props.count==4)?(
+        
+        props.fourth?"#205D6D":
+        "#896C9A"
+        ):""
+
+};
+width: 80%;
+height: 150px;
+border-radius: 20px;
+cursor: pointer;
+transition: 0.4s;
 `;

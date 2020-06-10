@@ -124,8 +124,8 @@ display: block;
     padding-bottom: 26px;
     `;
 const Div =styled.div`
-width: 100%;
-min-height: 100vh;
+width: 98%;
+min-height: 94vh;
 display: -webkit-box;
 display: -webkit-flex;
 display: -moz-box;

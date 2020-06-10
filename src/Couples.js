@@ -93,14 +93,16 @@ state={
           })
         }
         
-
+        let count=0;
         let result=replacer_array.map((item)=>{
           if(item!==null){
-            return <Card_lesson parameter={item}/>
+            count+=1;
+            return <Card_lesson parameter={item} count={count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}/>
 
           }
           else{
-            return <Card_free_aud/>
+            count+=1;
+            return <Card_free_aud first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth} count={count}/>
 
           }
         })
@@ -120,8 +122,9 @@ state={
 export default Couples;
 const AUD = styled.p`
 text-align:center;
-color:#ffffff;
+color:#000000;
 font-size:20px;
+font-weight:800;
 
 `;
 const Cells=styled.div`
