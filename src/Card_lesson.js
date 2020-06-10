@@ -22,9 +22,9 @@ class Card_lesson extends Component {
         return(
             <Card className="card 2" count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>
             <div className="card_image">          
-            <Text>{(lesson_type!==undefined)?lesson_type:null}</Text>
-            <Text>{(teacher1!==undefined)?teacher1:null}{(teacher1_1!==undefined)?teacher1_1:null}{(teacher2!==undefined)?teacher2:null}{(teacher2_1!==undefined)?teacher2_1:null}</Text>
-            <Text>{(group1!==undefined)?group1:null}    {(group2!==undefined)?group2:null}    {(group3!==undefined)?group3:null}   {(group4!==undefined)?group4:null}  </Text>
+            <Text count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>{(lesson_type!==undefined)?lesson_type:null}</Text>
+            <Text count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>{(teacher1!==undefined)?teacher1:null}{(teacher1_1!==undefined)?teacher1_1:null}{(teacher2!==undefined)?teacher2:null}{(teacher2_1!==undefined)?teacher2_1:null}</Text>
+            <Text count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>{(group1!==undefined)?group1:null}    {(group2!==undefined)?group2:null}    {(group3!==undefined)?group3:null}   {(group4!==undefined)?group4:null}  </Text>
             </div>
             <Title count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>
                 <p>{subject}</p>

@@ -192,7 +192,7 @@ display: grid;
 
 `;
 const First=styled.div`
-background:${props=>props.bol?"#9999CC":""};
+background:${props=>props.bol?"#205D6D":""};
 float: left;
     margin: auto;
     margin-bottom: 10px;
@@ -204,7 +204,7 @@ float: left;
     cursor: pointer;
     transition: 0.4s;`;
     const Second=styled.div`
-    background:${props=>props.bol?"#9999CC":""};
+    background:${props=>props.bol?"#205D6D":""};
 
 float: left;
     margin: auto;
@@ -217,7 +217,7 @@ float: left;
     cursor: pointer;
     transition: 0.4s;`;
     const Third=styled.div`
-    background:${props=>props.bol?"#9999CC":""};
+    background:${props=>props.bol?"#205D6D":""};
 
 float: left;
     margin: auto;
@@ -230,7 +230,7 @@ float: left;
     cursor: pointer;
     transition: 0.4s;`;
     const Fourth=styled.div`
-    background:${props=>props.bol?"#9999CC":""};
+    background:${props=>props.bol?"#205D6D":""};
 
 float: left;
     margin: auto;
