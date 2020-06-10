@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import Card_lesson from './Card_lesson';
 import Card_free_aud from './Card_free_aud';
 
-import {getLessons} from '../src/API/fetchRequest';
+import {getLessons} from '../API/fetchRequest';
 import styled from "styled-components";
 class Couples extends Component {
 state={

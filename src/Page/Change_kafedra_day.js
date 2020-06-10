@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Couples from './Couples';
-import {getAllRooms} from '../src/API/fetchRequest';
+import {getAllRooms} from '../API/fetchRequest';
 import styled from "styled-components";
 import Card_lesson_on_other from './Card_lesson_on_other';
 

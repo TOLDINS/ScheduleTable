@@ -1,6 +1,6 @@
 import React from 'react';
 import Shedule from './Cell';
-import './index.css'
+import './../index.css'
 import Cell from './Cell'
 import Change_kafedra_day from './Change_kafedra_day'
 import {

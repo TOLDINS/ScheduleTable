@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-import {getAllRooms,getLessons} from '../src/API/fetchRequest';
+import {getAllRooms,getLessons} from '../API/fetchRequest';
 class Shedule extends Component{
     state={
         allrooms:[],
