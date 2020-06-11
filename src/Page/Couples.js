@@ -112,7 +112,7 @@ state={
        
         
         return (
-                  <div style={{display:"grid", gridTemplateRows:"1fr 3fr 3fr 3fr 3fr"}}>
+                  <div style={{display:"grid"}}>
                   <AUD>{this.props.room.split('*')[0]}</AUD>   
                   {result}
                   </div>
