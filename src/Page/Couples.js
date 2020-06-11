@@ -12,7 +12,32 @@ state={
 }
     
   componentDidMount(){
+    this.update = setInterval(() => {
+      this.setState({ time: new Date() });
+
+      let ae=Number(this.props.day)+1;
+      console.log(ae)
+
+    if((this.state.time.getHours()===17&&this.state.time.getMinutes()>=20)||this.state.time.getHours()>17)
+    {
+      if(this.props.day===6)
+      {
+        getLessons(this.state.kaf,this.state.day).then(res=>this.setState({couples:res}));
+      }
+      else{
+        console.log("111111111111111111")
+
+        getLessons(this.props.kaf,ae).then(res=>this.setState({couples:res}));
+      }
+    }
+    else{
+
+      console.log(this.state.time.getHours())
+      console.log(this.state.time.getHours())
+
     getLessons(this.props.kaf,this.props.day).then(res=>this.setState({couples:res}));
+    }
+  }, 1 * 10000);
   }
   
 

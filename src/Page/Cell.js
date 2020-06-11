@@ -58,7 +58,7 @@ class Cell extends Component{
                     fourth:true
                 });
             }
-
+            
 
         }, 1 * 1000);
 }    
@@ -77,7 +77,7 @@ componentWillUnmount() { // delete the interval just before component is removed
                 return (
                 <div>
                     
-                         <Couples kaf={this.state.kaf}  room={classroom}  day={this.state.day} first={this.state.first} second={this.state.second} third={this.state.third} fourth={this.state.fourth}/>
+                         <Couples kaf={this.state.kaf}  room={classroom}  day={this.state.day} first={this.state.first} second={this.state.second} third={this.state.third} fourth={this.state.fourth} time={this.state.time}/>
                 </div>
                 
                 )
