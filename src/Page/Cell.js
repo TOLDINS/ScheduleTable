@@ -102,7 +102,7 @@ componentWillUnmount() { // delete the interval just before component is removed
 
         return(
         <Dive>
-            <div num={cell_result.length+1} style={{display:"grid"}}>
+            <Rows num={cell_result.length+1}>
                 <div>
                      
                      <Cells>
@@ -138,7 +138,7 @@ componentWillUnmount() { // delete the interval just before component is removed
                     </div>
                 {cell_result}
 
-            </div>
+            </Rows>
            
            <Lesson_on_other>
                
@@ -186,8 +186,7 @@ display: grid;
 
 `;
 
-const Cells=styled.div`
-display: grid;
+const Cells=styled.div`;
 
 `;
 const First=styled.div`
