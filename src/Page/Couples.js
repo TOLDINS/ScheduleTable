@@ -132,5 +132,4 @@ font-weight:800;
 `;
 const Cells=styled.div`
 display: grid;
-  grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
 `;

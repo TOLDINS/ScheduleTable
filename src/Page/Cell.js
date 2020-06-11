@@ -188,7 +188,6 @@ display: grid;
 
 const Cells=styled.div`
 display: grid;
-  grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
 
 `;
 const First=styled.div`
