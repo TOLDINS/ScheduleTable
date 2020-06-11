@@ -102,7 +102,7 @@ componentWillUnmount() { // delete the interval just before component is removed
 
         return(
         <Dive>
-            <div num={cell_result.length+1} style={{display:"grid",gridTemplateColumns:"repeat(8,1fr)"}}>
+            <div num={cell_result.length+1} style={{display:"grid"}}>
                 <div>
                      
                      <Cells>
