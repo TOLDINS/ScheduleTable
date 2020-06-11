@@ -154,8 +154,6 @@ componentWillUnmount() { // delete the interval just before component is removed
 export default Cell
 
 const Dive =styled.div`
-width: 98%;
-min-height: 90vh;
 display: -webkit-box;
 display: -webkit-flex;
 display: -moz-box;
@@ -186,7 +184,9 @@ display: grid;
 
 `;
 
-const Cells=styled.div`;
+const Cells=styled.div`
+display: grid;
+  grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
 
 `;
 const First=styled.div`
