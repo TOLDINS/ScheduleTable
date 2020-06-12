@@ -105,30 +105,30 @@ componentWillUnmount() { // delete the interval just before component is removed
             <tr num={cell_result.length+1}>
                      
                      <td >
-                         <AUD style={{fontWeight:"800" ,fontSize:"1em"}}>{time.toLocaleDateString()}    {time.toLocaleTimeString()}</AUD>
-                        
-                           
+                     <AUD style={{fontWeight:"800" ,fontSize:"1em"}}>
+                         {time.toLocaleDateString()}    
+                         {time.toLocaleTimeString()}</AUD>                         
                      <First style={{ textAlign:"center" ,padding: "10px"}} bol={this.state.first}>
-                         <p style={{margin:"65px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
+                         <P>
                          I
-                         </p>
+                         </P>
                          </First>
                      <Second style={{ textAlign:"center",padding: "10px"}} bol={this.state.second}>
-                     <p style={{margin:"65px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
+                     <P>
                         II
-                        </p>
+                        </P>
                          </Second>
                      <Third style={{ textAlign:"center",padding: "10px"}} bol={this.state.third}>
                         
-                     <p style={{margin:"65px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
+                     <P> 
                      III
-                         </p>
+                         </P>
                          </Third>
                      <Fourth style={{ textAlign:"center",padding: "10px"}} bol={this.state.fourth}>
                         
-                     <p style={{margin:"65px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
+                     <P> 
                       IV
-                         </p>
+                         </P>
                          </Fourth>
                          </td> 
                 {cell_result}
@@ -148,6 +148,22 @@ componentWillUnmount() { // delete the interval just before component is removed
 }
 export default Cell
 
+const P=styled.p`
+margin-top:65px;
+font-size:1em; 
+font-weight:bold;
+color:#000000;
+
+@media only screen and (max-width: 1281px) {
+
+    margin-top:40px;
+    font-size:1em; 
+    font-weight:bold;
+    color:#000000;
+
+}
+
+`;
 const Dive =styled.table`
 display: -webkit-box;
 display: -webkit-flex;

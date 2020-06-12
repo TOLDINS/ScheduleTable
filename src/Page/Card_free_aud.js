@@ -15,7 +15,7 @@ class Card_lesson extends Component {
 
 export default Card_lesson
 const Title=styled.p`
-font-size:20px;
+font-size:26px;
 color: ${
     props=>props.count==1?(
         props.first?"#fff":
@@ -47,6 +47,7 @@ color: ${
     font-size: 1em;
     margin-top: 40px;
     height: 40px;
+    font-size: 20px;
 
 }
 text-align: center;
@@ -54,7 +55,6 @@ text-align: center;
 margin-top: 65px;
 font-family: sans-serif;
     font-weight: bold;
-    font-size: 20px;
 `;
 const Card=styled.div`
 background-color:${
@@ -80,7 +80,6 @@ background-color:${
         ):""
 
 };
-box-shadow: 0px 0px 10px 10px rgba(253, 0, 219, 0.25);
 
 float: left;
     margin: auto;

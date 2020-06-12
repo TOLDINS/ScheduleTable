@@ -22,9 +22,18 @@ class Card_lesson extends Component {
         return(
             <Card className="card 2" count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>
             <div className="card_image">          
-            <Text count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>{(lesson_type!==undefined)?lesson_type:null}</Text>
-            <Text count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>{(teacher1!==undefined)?teacher1:null}{(teacher1_1!==undefined)?teacher1_1:null}{(teacher2!==undefined)?teacher2:null}{(teacher2_1!==undefined)?teacher2_1:null}</Text>
-            <Text count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>{(group1!==undefined)?group1:null}    {(group2!==undefined)?group2:null}    {(group3!==undefined)?group3:null}   {(group4!==undefined)?group4:null}  </Text>
+            <Text count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>
+                {(lesson_type!==undefined)?lesson_type:null}
+                
+                </Text>
+            <Text count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>
+                    {(teacher1!==undefined)?teacher1:null}     {(teacher1_1!==undefined)?teacher1_1:null}     {(teacher2!==undefined)?teacher2:null}     {(teacher2_1!==undefined)?teacher2_1:null}
+                
+                </Text>
+            <Text count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>
+                {(group1!==undefined)?group1:null}    {(group2!==undefined)?group2:null}    {(group3!==undefined)?group3:null}   {(group4!==undefined)?group4:null} 
+                
+                 </Text>
             </div>
             <Title count={this.props.count} first={this.props.first} second={this.props.second} third={this.props.third} fourth={this.props.fourth}>
                 <p>{subject}</p>
@@ -38,7 +47,7 @@ export default Card_lesson
 const Text =styled.p`
 margin:2px;
 font-size:16px;
-font-weight:bold;
+
 color: ${
     props=>props.count==1?(
         props.first?"#fff":
@@ -61,15 +70,23 @@ color: ${
         "#000000"
         ):"#000000"
 
+
+
+        
 };
+
+@media only screen and (max-width: 1024px) {
+    margin:2px;
+    font-size:12px;
+}
 `;
 const Title=styled.p`
 text-align: center;
 border-radius: 0px 0px 40px 40px;
 font-family: sans-serif;
 font-weight: bold;
-font-size: 20px;
-margin-top: -40px;
+font-size: 26px;
+margin-top: -65px;
 height: 40px;
 color: ${
     props=>props.count==1?(
@@ -94,22 +111,29 @@ color: ${
         ):"#000000"
 
 };
-@media only screen and (max-width: 1281px) {
+@media only screen and (min-width: 1025px) and (max-width: 1281px) {
     text-align: center;
-    border-radius: 0px 0px 40px 40px;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 1em;
     margin-top: -40px;
     height: 40px;
+    font-size:20px;
+
+}
+@media only screen and (max-width: 1024px) {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: -40px;
+    height: 40px;
+    font-size:16px;
 
 }
 
 
 
-font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1em;
 `;
 const Card =styled.div`
 
