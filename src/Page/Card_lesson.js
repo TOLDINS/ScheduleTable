@@ -70,7 +70,6 @@ font-weight: bold;
 font-size: 20px;
 margin-top: -80px;
 height: 40px;
-font-size:20px;
 color: ${
     props=>props.count==1?(
         props.first?"#fff":
@@ -96,7 +95,7 @@ color: ${
 };
 font-family: sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1em;
 `;
 const Card =styled.div`
 float: left;
@@ -128,7 +127,7 @@ background: ${
 
 };
 width: 80%;
-height: 150px;
+min-height: 10em;
 border-radius: 20px;
 cursor: pointer;
 transition: 0.4s;

@@ -9,6 +9,7 @@ class Change_kafedra_day extends Component{
     route(){
       let kaf =  document.getElementById('caf')
       let day =  document.getElementById('day')
+      alert(window.screen.width+"  "+window.screen.height)
       if(kaf.value!=="0"&&day.value!=="0")
       {
         window.open(`/cafedra/${kaf.value}/${day.value}`)

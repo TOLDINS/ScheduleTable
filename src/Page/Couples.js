@@ -112,10 +112,10 @@ state={
        
         
         return (
-                  <div style={{display:"grid"}}>
+                  <Cells >
                   <AUD>{this.props.room.split('*')[0]}</AUD>   
                   {result}
-                  </div>
+                  </Cells>
 
         )
     }
@@ -126,10 +126,10 @@ export default Couples;
 const AUD = styled.p`
 text-align:center;
 color:#000000;
-font-size:20px;
+font-size:1em;
 font-weight:800;
 
 `;
 const Cells=styled.div`
-display: grid;
+margin: auto;
 `;

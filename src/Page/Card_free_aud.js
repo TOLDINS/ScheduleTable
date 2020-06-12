@@ -76,7 +76,7 @@ float: left;
     margin-top: 20px;
     
     width: 80%;
-    height: 150px;
+    min-height: 10em;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.4s;

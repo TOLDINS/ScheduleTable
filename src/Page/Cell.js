@@ -105,29 +105,29 @@ componentWillUnmount() { // delete the interval just before component is removed
             <tr num={cell_result.length+1}>
                      
                      <tr>
-                     <td style={{width:`${100/(this.state.classrooms.length+1)}%`}}>
-                         <AUD style={{fontWeight:"800"}}>{time.toLocaleDateString()}    {time.toLocaleTimeString()}</AUD>
+                     <td >
+                         <AUD style={{fontWeight:"800" ,fontSize:"1em"}}>{time.toLocaleDateString()}    {time.toLocaleTimeString()}</AUD>
                         
                            
-                     <First style={{height:"150px", textAlign:"center" ,marginBottom: "10px",padding: "10px"}} bol={this.state.first}>
-                         <p style={{margin:"70px",fontSize:"20px", fontWeight:"bold",color:"#000000"}}>
+                     <First style={{minHeight:"10em", textAlign:"center" ,marginBottom: "10px",padding: "10px"}} bol={this.state.first}>
+                         <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
                          I
                          </p>
                          </First>
-                     <Second style={{height:"150px", textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.second}>
-                     <p style={{margin:"70px",fontSize:"20px", fontWeight:"bold",color:"#000000"}}>
+                     <Second style={{minHeight:"10em", textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.second}>
+                     <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
                         II
                         </p>
                          </Second>
-                     <Third style={{height:"150px", textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.third}>
+                     <Third style={{minHeight:"10em", textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.third}>
                         
-                     <p style={{margin:"70px",fontSize:"20px", fontWeight:"bold",color:"#000000"}}> 
+                     <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
                      III
                          </p>
                          </Third>
-                     <Fourth style={{height:"150px", textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.fourth}>
+                     <Fourth style={{minHeight:"10em", textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.fourth}>
                         
-                     <p style={{margin:"70px",fontSize:"20px", fontWeight:"bold",color:"#000000"}}> 
+                     <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
                       IV
                          </p>
                          </Fourth>
