@@ -39,6 +39,19 @@ color: ${
         ):"#000000"
 
 };
+@media only screen and (max-width: 1281px) {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 40px;
+    height: 40px;
+
+}
+text-align: center;
+
+margin-top: 65px;
 font-family: sans-serif;
     font-weight: bold;
     font-size: 20px;
@@ -72,15 +85,22 @@ box-shadow: 0px 0px 10px 10px rgba(253, 0, 219, 0.25);
 float: left;
     margin: auto;
     margin-bottom: 10px;
-    padding: 10px;
     margin-top: 20px;
-    
+
+    padding: 10px;
     width: 80%;
-    min-height: 10em;
+    height: 150px;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.4s;
-    display: flex;
-align-items: center;
-justify-content: center;
+    @media only screen and (max-width: 1281px) {
+        height:100px;      
+        margin-bottom: 2.5px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.4s;
+        padding: 10px;
+    width: 80%;
+
+   
 `;

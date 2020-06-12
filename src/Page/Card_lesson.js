@@ -36,6 +36,7 @@ class Card_lesson extends Component {
 
 export default Card_lesson
 const Text =styled.p`
+margin:2px;
 font-size:16px;
 font-weight:bold;
 color: ${
@@ -68,7 +69,7 @@ border-radius: 0px 0px 40px 40px;
 font-family: sans-serif;
 font-weight: bold;
 font-size: 20px;
-margin-top: -80px;
+margin-top: -40px;
 height: 40px;
 color: ${
     props=>props.count==1?(
@@ -93,16 +94,25 @@ color: ${
         ):"#000000"
 
 };
+@media only screen and (max-width: 1281px) {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: -40px;
+    height: 40px;
+
+}
+
+
+
 font-family: sans-serif;
     font-weight: bold;
     font-size: 1em;
 `;
 const Card =styled.div`
-float: left;
-margin: auto;
-margin-bottom: 10px;
-padding: 10px;
-margin-top: 20px;
+
 background: ${
     props=>props.count==1?(
         props.first?"#205D6D":
@@ -126,9 +136,25 @@ background: ${
         ):""
 
 };
-width: 80%;
-min-height: 10em;
-border-radius: 20px;
-cursor: pointer;
-transition: 0.4s;
+float: left;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    padding: 10px;
+    width: 80%;
+    height: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    @media only screen and (max-width: 1281px) {
+        height:100px;      
+        margin-bottom: 2.5px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.4s;
+        padding: 10px;
+    width: 80%;
+
+   
 `;

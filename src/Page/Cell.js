@@ -101,38 +101,36 @@ componentWillUnmount() { // delete the interval just before component is removed
 
 
         return(
-        <table>
+        <Dive>
             <tr num={cell_result.length+1}>
                      
-                     <tr>
                      <td >
                          <AUD style={{fontWeight:"800" ,fontSize:"1em"}}>{time.toLocaleDateString()}    {time.toLocaleTimeString()}</AUD>
                         
                            
-                     <First style={{minHeight:"10em", textAlign:"center" ,marginBottom: "10px",padding: "10px"}} bol={this.state.first}>
+                     <First style={{ textAlign:"center" ,marginBottom: "10px",padding: "10px"}} bol={this.state.first}>
                          <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
                          I
                          </p>
                          </First>
-                     <Second style={{minHeight:"10em", textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.second}>
+                     <Second style={{ textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.second}>
                      <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
                         II
                         </p>
                          </Second>
-                     <Third style={{minHeight:"10em", textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.third}>
+                     <Third style={{ textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.third}>
                         
                      <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
                      III
                          </p>
                          </Third>
-                     <Fourth style={{minHeight:"10em", textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.fourth}>
+                     <Fourth style={{ textAlign:"center",padding: "10px"}} bol={this.state.fourth}>
                         
                      <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
                       IV
                          </p>
                          </Fourth>
                          </td> 
-                     </tr>
                 {cell_result}
 
             </tr>
@@ -142,7 +140,7 @@ componentWillUnmount() { // delete the interval just before component is removed
                {any_result}
 
            </tr>
-            </table>
+            </Dive>
         )
     }
 
@@ -150,7 +148,7 @@ componentWillUnmount() { // delete the interval just before component is removed
 }
 export default Cell
 
-const Dive =styled.div`
+const Dive =styled.table`
 display: -webkit-box;
 display: -webkit-flex;
 display: -moz-box;
@@ -189,49 +187,92 @@ background:${props=>props.bol?"#205D6D":""};
 float: left;
     margin: auto;
     margin-bottom: 10px;
-    padding: 10px;
     margin-top: 20px;
+
+    padding: 10px;
     width: 80%;
     height: 150px;
     border-radius: 40px;
     cursor: pointer;
-    transition: 0.4s;`;
-    const Second=styled.div`
+    transition: 0.4s;
+    @media only screen and (max-width: 1281px) {
+        height:100px;      
+        margin-bottom: 2.5px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.4s;
+        padding: 10px;
+    width: 80%;
+}
+    `;
+const Second=styled.div`
     background:${props=>props.bol?"#205D6D":""};
 
-float: left;
+    float: left;
     margin: auto;
     margin-bottom: 10px;
-    padding: 10px;
     margin-top: 20px;
+
+    padding: 10px;
     width: 80%;
     height: 150px;
     border-radius: 40px;
     cursor: pointer;
-    transition: 0.4s;`;
-    const Third=styled.div`
+    transition: 0.4s;
+    @media only screen and (max-width: 1281px) {
+        height:100px;      
+        margin-bottom: 2.5px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.4s;
+        padding: 10px;
+    width: 80%;
+
+   `;
+const Third=styled.div`
     background:${props=>props.bol?"#205D6D":""};
 
-float: left;
+    float: left;
     margin: auto;
     margin-bottom: 10px;
-    padding: 10px;
     margin-top: 20px;
+
+    padding: 10px;
     width: 80%;
     height: 150px;
     border-radius: 40px;
     cursor: pointer;
-    transition: 0.4s;`;
+    transition: 0.4s;
+    @media only screen and (max-width: 1281px) {
+        height:100px;      
+        margin-bottom: 2.5px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.4s;
+        padding: 10px;
+    width: 80%;
+
+   `;
     const Fourth=styled.div`
     background:${props=>props.bol?"#205D6D":""};
-
-float: left;
+    float: left;
     margin: auto;
     margin-bottom: 10px;
-    padding: 10px;
     margin-top: 20px;
+
+    padding: 10px;
     width: 80%;
     height: 150px;
     border-radius: 40px;
     cursor: pointer;
-    transition: 0.4s;`;
+    transition: 0.4s;
+    @media only screen and (max-width: 1281px) {
+        height:100px;      
+        margin-bottom: 2.5px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.4s;
+        padding: 10px;
+    width: 80%;
+
+   `;

@@ -87,14 +87,12 @@ font-family: sans-serif;
 `;
 const Card=styled.div`
 float: left;
-    margin: auto;
-    margin-bottom: 10px;
     padding: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #dfd7cc;
     width: 80%;
     height: 40px;
-    border-radius: 20px;
+    border-radius:20px;
     cursor: pointer;
     transition: 0.4s;
     display: flex;
