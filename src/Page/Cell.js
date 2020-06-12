@@ -75,10 +75,10 @@ componentWillUnmount() { // delete the interval just before component is removed
 
 
                 return (
-                <div>
+                <td style={{width:`${100/(this.state.classrooms.length+1)}%`}}>
                     
                          <Couples kaf={this.state.kaf}  room={classroom}  day={this.state.day} first={this.state.first} second={this.state.second} third={this.state.third} fourth={this.state.fourth} time={this.state.time}/>
-                </div>
+                </td>
                 
                 )
 
@@ -101,16 +101,14 @@ componentWillUnmount() { // delete the interval just before component is removed
 
 
         return(
-        <Dive>
-            <Rows num={cell_result.length+1}>
-                <div>
+        <table>
+            <tr num={cell_result.length+1}>
                      
-                     <Cells>
-                     <AUD>
-                         <p style={{fontWeight:"800"}}>{time.toLocaleDateString()}</p>
-                        <p style={{fontWeight:"800"}}>{time.toLocaleTimeString()}</p>
-            
-                         </AUD>    
+                     <tr>
+                     <td style={{width:`${100/(this.state.classrooms.length+1)}%`}}>
+                         <AUD style={{fontWeight:"800"}}>{time.toLocaleDateString()}    {time.toLocaleTimeString()}</AUD>
+                        
+                           
                      <First style={{height:"150px", textAlign:"center" ,marginBottom: "10px",padding: "10px"}} bol={this.state.first}>
                          <p style={{margin:"70px",fontSize:"20px", fontWeight:"bold",color:"#000000"}}>
                          I
@@ -133,19 +131,18 @@ componentWillUnmount() { // delete the interval just before component is removed
                       IV
                          </p>
                          </Fourth>
-
-                     </Cells>
-                    </div>
+                         </td> 
+                     </tr>
                 {cell_result}
 
-            </Rows>
+            </tr>
            
-           <Lesson_on_other>
+           <tr>
                
                {any_result}
 
-           </Lesson_on_other>
-            </Dive>
+           </tr>
+            </table>
         )
     }
 
@@ -171,12 +168,10 @@ display: grid;
   grid-template-columns: repeat(5,1fr);
 `;
 
-const AUD = styled.div`
-text-align:center;
+const AUD = styled.p`
 color:#000000;
-font-size: 20px;
-display: grid;
-grid-template-columns: repeat(2,1fr);
+font-size:20px;
+font-weight:800;
 `;
 const Rows=styled.div`
 display: grid;

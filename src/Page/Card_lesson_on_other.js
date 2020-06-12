@@ -24,6 +24,7 @@ class Card_lesson extends Component {
         }=this.props.parameter
 const classrooms=this.props.classrooms
         return(
+            <td>
             <Card>
                 <Columns>
                 <Couple>{couple}</Couple>
@@ -51,6 +52,7 @@ const classrooms=this.props.classrooms
                 <Title>{subject}</Title>
                 </Columns>
             </Card>
+            </td>
         )
     }
 }
