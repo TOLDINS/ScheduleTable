@@ -25,8 +25,8 @@ class Card_lesson extends Component {
 const classrooms=this.props.classrooms
         return(
             <td>
-            <Card>
-                <Columns>
+            <Table>
+                <tr>
                 <Couple>{couple}</Couple>
                 <div>
                 <Rows>
@@ -50,15 +50,15 @@ const classrooms=this.props.classrooms
                 </Rows>
                 </div>
                 <Title>{subject}</Title>
-                </Columns>
-            </Card>
+                </tr>
+            </Table>
             </td>
         )
     }
 }
 
 export default Card_lesson
-const Couple=styled.p`
+const Couple=styled.td`
 color: #282d22;
 font-family: sans-serif;    
 padding: 5px;
@@ -71,13 +71,15 @@ margin:3px;
 display: grid;
   grid-template-columns: 1fr 3fr 1fr;
 `;
-const Rows=styled.div`
+const Rows=styled.td`
+text-align:center;
 display: grid;
   grid-template-columns: repeat(2,1fr);
 height:20px;
 margin-top:5px;
 `;
-const Title=styled.p`
+const Title=styled.td`
+text-align:center;
 font-size:20px;
 color: #282d22;
 margin-left:10px;
@@ -85,17 +87,11 @@ font-family: sans-serif;
     font-weight: bold;
     font-size: 20px;
 `;
-const Card=styled.div`
-float: left;
+const Table=styled.table`
     padding: 5px;
-    margin-top: 10px;
+    margin:0 10px;
     background-color: #dfd7cc;
-    width: 80%;
-    height: 40px;
     border-radius:20px;
-    cursor: pointer;
-    transition: 0.4s;
-    display: flex;
-align-items: center;
-justify-content: center;
+    
+    
 `;

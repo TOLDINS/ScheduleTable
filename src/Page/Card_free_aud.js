@@ -101,6 +101,7 @@ float: left;
         transition: 0.4s;
         padding: 10px;
     width: 80%;
-
+    margin-top:2.5px;
+    }
    
 `;

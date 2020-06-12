@@ -108,25 +108,25 @@ componentWillUnmount() { // delete the interval just before component is removed
                          <AUD style={{fontWeight:"800" ,fontSize:"1em"}}>{time.toLocaleDateString()}    {time.toLocaleTimeString()}</AUD>
                         
                            
-                     <First style={{ textAlign:"center" ,marginBottom: "10px",padding: "10px"}} bol={this.state.first}>
-                         <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
+                     <First style={{ textAlign:"center" ,padding: "10px"}} bol={this.state.first}>
+                         <p style={{margin:"65px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
                          I
                          </p>
                          </First>
-                     <Second style={{ textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.second}>
-                     <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
+                     <Second style={{ textAlign:"center",padding: "10px"}} bol={this.state.second}>
+                     <p style={{margin:"65px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}>
                         II
                         </p>
                          </Second>
-                     <Third style={{ textAlign:"center",marginBottom: "10px",padding: "10px"}} bol={this.state.third}>
+                     <Third style={{ textAlign:"center",padding: "10px"}} bol={this.state.third}>
                         
-                     <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
+                     <p style={{margin:"65px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
                      III
                          </p>
                          </Third>
                      <Fourth style={{ textAlign:"center",padding: "10px"}} bol={this.state.fourth}>
                         
-                     <p style={{margin:"70px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
+                     <p style={{margin:"65px",fontSize:"1em", fontWeight:"bold",color:"#000000"}}> 
                       IV
                          </p>
                          </Fourth>
@@ -192,7 +192,7 @@ float: left;
     padding: 10px;
     width: 80%;
     height: 150px;
-    border-radius: 40px;
+    border-radius: 20px;
     cursor: pointer;
     transition: 0.4s;
     @media only screen and (max-width: 1281px) {
@@ -203,7 +203,8 @@ float: left;
         transition: 0.4s;
         padding: 10px;
     width: 80%;
-}
+    margin-top:2.5px;
+    }
     `;
 const Second=styled.div`
     background:${props=>props.bol?"#205D6D":""};
@@ -227,7 +228,8 @@ const Second=styled.div`
         transition: 0.4s;
         padding: 10px;
     width: 80%;
-
+    margin-top:2.5px;    
+}
    `;
 const Third=styled.div`
     background:${props=>props.bol?"#205D6D":""};
@@ -240,7 +242,7 @@ const Third=styled.div`
     padding: 10px;
     width: 80%;
     height: 150px;
-    border-radius: 40px;
+    border-radius: 20px;
     cursor: pointer;
     transition: 0.4s;
     @media only screen and (max-width: 1281px) {
@@ -251,7 +253,8 @@ const Third=styled.div`
         transition: 0.4s;
         padding: 10px;
     width: 80%;
-
+    margin-top:2.5px;
+    }
    `;
     const Fourth=styled.div`
     background:${props=>props.bol?"#205D6D":""};
@@ -263,7 +266,7 @@ const Third=styled.div`
     padding: 10px;
     width: 80%;
     height: 150px;
-    border-radius: 40px;
+    border-radius: 20px;
     cursor: pointer;
     transition: 0.4s;
     @media only screen and (max-width: 1281px) {
@@ -274,5 +277,7 @@ const Third=styled.div`
         transition: 0.4s;
         padding: 10px;
     width: 80%;
+    margin-top:2.5px;
+    }
 
    `;

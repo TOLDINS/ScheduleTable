@@ -154,7 +154,8 @@ float: left;
         cursor: pointer;
         transition: 0.4s;
         padding: 10px;
+        margin-top:2.5px;
     width: 80%;
-
+    }
    
 `;
