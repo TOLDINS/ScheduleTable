@@ -24,11 +24,11 @@ class Card_lesson extends Component {
         }=this.props.parameter
 const classrooms=this.props.classrooms
         return(
-            <td>
+            <td >
             <Table>
                 <tr>
                 <Couple>{couple}</Couple>
-                <div>
+                <td>
                 <Rows>
                 <A>{(group!==undefined && group!==null)?group:null}
                     {(group1!==undefined && group1!==null)?group1:null}
@@ -48,7 +48,7 @@ const classrooms=this.props.classrooms
                   <A>{(classroom2!==undefined && classroom2!==null)?classroom2.split('*')[0]:null}   
                   </A>
                 </Rows>
-                </div>
+                </td>
                 <Title>{subject}</Title>
                 </tr>
             </Table>
@@ -61,7 +61,6 @@ export default Card_lesson
 const Couple=styled.td`
 color: #282d22;
 font-family: sans-serif;    
-padding: 5px;
 `;
 const A=styled.a`
 margin:2px;
@@ -71,24 +70,20 @@ margin:3px;
 display: grid;
   grid-template-columns: 1fr 3fr 1fr;
 `;
-const Rows=styled.td`
+const Rows=styled.div`
 text-align:center;
 display: grid;
   grid-template-columns: repeat(2,1fr);
 height:20px;
-margin-top:5px;
 `;
 const Title=styled.td`
 text-align:center;
-font-size:20px;
 color: #282d22;
 margin-left:10px;
 font-family: sans-serif;
     font-weight: bold;
-    font-size: 20px;
 `;
 const Table=styled.table`
-    padding: 5px;
     margin:0 10px;
     background-color: #dfd7cc;
     border-radius:20px;

@@ -102,44 +102,39 @@ componentWillUnmount() { // delete the interval just before component is removed
 
         return(
         <Dive>
-            <tr num={cell_result.length+1}>
-                     
-                     <td >
-                     <AUD style={{fontWeight:"800" ,fontSize:"1em"}}>
-                         {time.toLocaleDateString()}    
-                         {time.toLocaleTimeString()}</AUD>                         
-                     <First style={{ textAlign:"center" ,padding: "10px"}} bol={this.state.first}>
+            <caption>Розклад кафедри №{this.state.kaf}</caption>
+            <tr num={cell_result.length+1}>  
+                <td >
+                    <AUD style={{fontWeight:"800" ,fontSize:"1em"}}>
+                         {time.toLocaleTimeString()}
+                    </AUD>                         
+                    <First  bol={this.state.first}>
                          <P>
                          I
                          </P>
                          </First>
-                     <Second style={{ textAlign:"center",padding: "10px"}} bol={this.state.second}>
+                    <Second style={{ textAlign:"center",padding: "10px"}} bol={this.state.second}>
                      <P>
                         II
                         </P>
                          </Second>
-                     <Third style={{ textAlign:"center",padding: "10px"}} bol={this.state.third}>
+                    <Third style={{ textAlign:"center",padding: "10px"}} bol={this.state.third}>
                         
                      <P> 
                      III
                          </P>
                          </Third>
-                     <Fourth style={{ textAlign:"center",padding: "10px"}} bol={this.state.fourth}>
-                        
-                     <P> 
-                      IV
-                         </P>
+                    <Fourth style={{ textAlign:"center",padding: "10px"}} bol={this.state.fourth}>  
+                    <P> 
+                    IV
+                    </P>
                          </Fourth>
-                         </td> 
+                </td> 
                 {cell_result}
-
-            </tr>
-           
-           <tr>
-               
-               {any_result}
-
-           </tr>
+            </tr> 
+           <Lesson_on_other num={any_result.length}>     
+                {any_result}
+           </Lesson_on_other>
             </Dive>
         )
     }
@@ -176,16 +171,16 @@ align-items: center;
 background: rgb(167,167,167);
 background: linear-gradient(90deg, rgba(167,167,167,1) 0%, rgba(199,199,246,1) 0%, rgba(117,223,245,1) 100%);
 `;
-const Lesson_on_other=styled.div`
+const Lesson_on_other=styled.tr`
+font-size:${props=>props.num>5?"10px":"14px"};
 width:100%;
-display: grid;
-  grid-template-columns: repeat(5,1fr);
 `;
 
 const AUD = styled.p`
 color:#000000;
 font-size:20px;
 font-weight:800;
+text-align: center;
 `;
 const Rows=styled.div`
 display: grid;
@@ -199,6 +194,7 @@ display: grid;
 
 `;
 const First=styled.div`
+
 background:${props=>props.bol?"#205D6D":""};
 float: left;
     margin: auto;
@@ -211,8 +207,13 @@ float: left;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.4s;
-    @media only screen and (max-width: 1281px) {
+    
+    text-align:center;
+    padding: 10px;
+        @media only screen and (max-width: 1281px) {
         height:100px;      
+        text-align:center;
+        padding: 10px;
         margin-bottom: 2.5px;
         border-radius: 20px;
         cursor: pointer;
@@ -229,7 +230,9 @@ const Second=styled.div`
     margin: auto;
     margin-bottom: 10px;
     margin-top: 20px;
-
+    
+    text-align:center;
+    padding: 10px;
     padding: 10px;
     width: 80%;
     height: 150px;
@@ -238,6 +241,9 @@ const Second=styled.div`
     transition: 0.4s;
     @media only screen and (max-width: 1281px) {
         height:100px;      
+            
+        text-align:center;
+        padding: 10px;
         margin-bottom: 2.5px;
         border-radius: 20px;
         cursor: pointer;
@@ -254,7 +260,9 @@ const Third=styled.div`
     margin: auto;
     margin-bottom: 10px;
     margin-top: 20px;
-
+    
+    text-align:center;
+    padding: 10px;
     padding: 10px;
     width: 80%;
     height: 150px;
@@ -262,7 +270,10 @@ const Third=styled.div`
     cursor: pointer;
     transition: 0.4s;
     @media only screen and (max-width: 1281px) {
-        height:100px;      
+        height:100px;   
+            
+        text-align:center;
+        padding: 10px;   
         margin-bottom: 2.5px;
         border-radius: 20px;
         cursor: pointer;
@@ -284,9 +295,15 @@ const Third=styled.div`
     height: 150px;
     border-radius: 20px;
     cursor: pointer;
+        
+    text-align:center;
+    padding: 10px;
     transition: 0.4s;
     @media only screen and (max-width: 1281px) {
         height:100px;      
+            
+        text-align:center;
+        padding: 10px;
         margin-bottom: 2.5px;
         border-radius: 20px;
         cursor: pointer;
